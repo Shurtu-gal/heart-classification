@@ -19,7 +19,7 @@ The features are extracted using four different methods:
 The features thus extracted are preprocessed using **Standard Scaler**.
 
 ### Model Architecture
-
+We are using a **Convolutional Neural Network (CNN)** and also comparing multiple classifiers like **Random Forest**, **SVM**, **KNN** and **Logistic Regression**.
  
 ### Setup
 
