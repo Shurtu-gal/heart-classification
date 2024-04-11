@@ -16,7 +16,7 @@ The features are extracted using four different methods:
  
 ### Preprocessing
 
-The features thus extracted are preprocessed using **Standard Scaler** and **MinMax Scaler**.
+The features thus extracted are preprocessed using **Standard Scaler**.
 
 ### Model Architecture
 
