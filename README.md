@@ -19,8 +19,39 @@ The features are extracted using four different methods:
 The features thus extracted are preprocessed using **Standard Scaler**.
 
 ### Model Architecture
-We are using a **Convolutional Neural Network (CNN)** and also comparing multiple classifiers like **Random Forest**, **SVM**, **KNN** and **Logistic Regression**.
- 
+
+#### Using Classifiers
+
+This approach involves comparing the performance of different machine learning classifiers on the preprocessed data. We trained and evaluated various classifiers and reported the accuracy achieved by each on the heart sound classification task. Additionally, we utilised Grid Search to optimise the hyperparameters of these classifiers for improved performance.
+
+We used the following classifiers:
+
+
+- RandomForestClassifier	
+- SVC	
+- AdaBoostClassifier	
+- DecisionTreeClassifier	
+- KNeighborsClassifier	
+- SVC RBF kernel	
+- QuadraticDiscriminantAnalysis	
+- GaussianNB
+
+#### Using a Convolutional Neural Network 
+
+The second method leverages a 1D Convolutional Neural Network (CNN) architecture specifically designed for processing sequential data like audio signals.
+	
+The CNN has the following architecture:
+
+**Conv1D Layer**: Extracts local features using a variable number of filters (32 to 256) with a kernel size of 2, followed by a ReLU activation.
+**MaxPooling1D Layer**: Downsamples the data while preserving important features.
+**Flatten Layer**: Reshapes the output into a 1D vector for dense layers.
+**Dense Layer 1**: Introduces non-linearity with ReLU activation and learns higher-level features with a variable number of units (32 to 256).
+**Dropout Layer**: Prevents overfitting by randomly dropping out 50% of neurons during training.
+**Output Layer:** Predicts the probability of a heart sound belonging to the abnormal class (sigmoid activation).
+
+Hyperparameter tuning optimises the number of filters and dense layer units for best performance.
+
+
 ### Setup
 
 ```bash 
